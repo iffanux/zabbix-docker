@@ -1,2 +1,10 @@
-﻿timeout: 60
+stages:
+- name: prod
+  steps:
+  - applyAppConfig:
+      catalogTemplate: zabbix
+      version: v1
+      name: zabbix-docker
+      targetNamespace: zabbix
+timeout: 60
 notification: {}
